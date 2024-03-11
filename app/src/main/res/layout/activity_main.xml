@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:id="@+id/coordinatorLayout">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:fitsSystemWindows="true"
-    >
+            android:id="@+id/appBarLayout"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
 
     </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars" android:id="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="parent" app:layout_constraintBottom_toTopOf="parent"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/alert_light_frame"
+            android:id="@+id/droidImage" app:layout_anchorGravity="bottom|center"
+            app:layout_anchor="@+id/appBarLayout"
+            tools:layout_editor_absoluteY="227dp" tools:layout_editor_absoluteX="183dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            tools:layout_editor_absoluteY="323dp" tools:layout_editor_absoluteX="179dp"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
