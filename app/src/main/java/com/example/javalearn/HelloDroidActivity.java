@@ -1,5 +1,6 @@
 package com.example.javalearn;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,8 +14,8 @@ public class HelloDroidActivity extends AppCompatActivity {
     private int counter = 0;
 
     @Override
-    protected void onCreate(Bundle savedInstanseState) {
-        super.onCreate(savedInstanseState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         message = findViewById(R.id.clickCounter);
@@ -28,6 +29,7 @@ public class HelloDroidActivity extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("DefaultLocale")
     private void tapDroid() {
         counter++;
         String countAsText;
