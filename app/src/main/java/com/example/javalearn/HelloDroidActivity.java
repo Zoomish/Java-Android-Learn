@@ -22,7 +22,7 @@ public class HelloDroidActivity extends AppCompatActivity {
 
         droid.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void OnClick(View v) {
+            public void onClick(View v) {
                 tapDroid();
             }
         });
@@ -31,6 +31,18 @@ public class HelloDroidActivity extends AppCompatActivity {
     private void tapDroid() {
         counter++;
         String countAsText;
+
+        switch (counter) {
+            case 1:
+                countAsText = "once";
+                break;
+            case 2:
+                countAsText = "twice";
+                break;
+            default:
+                countAsText = String.format("%d times", counter);
+        }
+        message.setText(String.format("You taushed the droid %s", countAsText));
 
     }
 }
