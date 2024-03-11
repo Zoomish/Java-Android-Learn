@@ -1,6 +1,5 @@
 package com.example.javalearn;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -29,11 +28,9 @@ public class HelloDroidActivity extends AppCompatActivity {
         });
     }
 
-    @SuppressLint("DefaultLocale")
     private void tapDroid() {
         counter++;
         String countAsText;
-
         switch (counter) {
             case 1:
                 countAsText = "once";
