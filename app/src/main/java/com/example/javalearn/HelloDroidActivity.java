@@ -29,6 +29,8 @@ public class HelloDroidActivity extends AppCompatActivity {
     }
 
     private void tapDroid() {
+        counter++;
+        String countAsText;
 
     }
 }
